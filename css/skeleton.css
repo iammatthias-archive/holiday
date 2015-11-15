@@ -127,7 +127,7 @@ body {
   font-family: "Niconne", cursive, "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222;
   text-align: center;
-  background-color: aliceblue;}
+  background: radial-gradient(#EB3349 0%, #FF512F 100%);}
 
 
 /* Typography
@@ -160,9 +160,9 @@ p {
 /* Links
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 a {
-  color: #1EAEDB; }
+  color: #2f2f2f; }
 a:hover {
-  color: #0FA0CE; }
+  color: #2f2f2f; }
 
 
 /* Buttons
@@ -426,596 +426,369 @@ there.
 
 
 
-#christmas {
-  background: #162a4e;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBjMWQzOCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFhMzE1OCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #0c1d38), color-stop(100%, #1a3158));
-  background-image: -moz-linear-gradient(#0c1d38, #1a3158);
-  background-image: -webkit-linear-gradient(#0c1d38, #1a3158);
-  background-image: linear-gradient(#0c1d38, #1a3158);
+#thanksgiving {
+
   position: relative;
-  width: 182px;
-  height: 182px;
+  width: 450px;
+  height: 500px;
   margin: 50px auto;
   overflow: hidden;
   /* iOS hack for border radius bleed with transforms */
   -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
 }
-#christmas .ground {
-  -moz-border-radius-topright: 130px 40px;
-  -webkit-border-top-right-radius: 130px 40px;
-  border-top-right-radius: 130px 40px;
+
+//body transition
+@-webkit-keyframes bodyMove {
+    0%   {transform:rotate(-10deg)}
+    30%   {transform:rotate(-10deg)}
+    70% {transform:rotate(4deg);border-top-right-radius:150%;}
+    100% {transform:rotate(4deg);border-top-right-radius:150%;}
+}
+
+/* Standard syntax */
+@keyframes bodyMove {
+    0%   {transform:rotate(-10deg)}
+    30%   {transform:rotate(-10deg)}
+    70% {transform:rotate(4deg);border-top-right-radius:150%;}
+    100% {transform:rotate(4deg);border-top-right-radius:150%;}
+}
+
+//head transition
+@-webkit-keyframes headMove {
+    0%   {left:24%;top:40%;}
+    30%   {left:24%;top:40%;}
+    70% {left:40%;top:56%;box-shadow:2px 2px 2px rgba(0,0,0,0.3)}
+  100% {left:40%;top:56%;box-shadow:2px 2px 2px rgba(0,0,0,0.3)}
+}
+
+/* Standard syntax */
+@keyframes headMove {
+     0%   {left:24%;top:40%;}
+    30%   {left:24%;top:40%;}
+    70% {left:40%;top:56%;box-shadow:2px 2px 2px rgba(0,0,0,0.3)}
+  100% {left:40%;top:56%;box-shadow:2px 2px 2px rgba(0,0,0,0.3)}
+}
+
+//leg transition
+@-webkit-keyframes legMove {
+    0%   {background:#F7CA18;width:15px;
+    height:30px; top:70%;
+    left:40%;}
+    30%   {background:#F7CA18;width:15px;
+    height:30px; top:70%;
+    left:40%;}
+    70% {width:200px; height:10px;z-index:1; background:#ABB7B7;left:23%;top:67%;border-bottom-left-radius:30%; border-bottom-right-radius:30%;border-top-right-radius:10%;border-top-left-radius:10%;}
+    100% {width:200px; height:10px;z-index:1; background:#ABB7B7;left:23%;top:67%;border-bottom-left-radius:30%; border-bottom-right-radius:30%;border-top-right-radius:10%;border-top-left-radius:10%;}
+}
+
+/* Standard syntax */
+@keyframes legMove {
+    0%   {background:#F7CA18;width:15px;
+    height:30px; top:70%;
+    left:40%;}
+    30%   {background:#F7CA18;width:15px;
+    height:30px; top:70%;
+    left:40%;}
+    70% {width:200px; height:10px;z-index:1; background:#ABB7B7;left:23%;top:67%;border-bottom-left-radius:30%; border-bottom-right-radius:30%;border-top-right-radius:10%;border-top-left-radius:10%;}
+    100% {width:200px; height:10px;z-index:1; background:#ABB7B7;left:23%;top:67%;border-bottom-left-radius:30%; border-bottom-right-radius:30%;border-top-right-radius:10%;border-top-left-radius:10%;}
+}
+
+//feather3 transition
+@-webkit-keyframes bf3Move {
+    0%   {width:20px;
+    height:70px;
+    background:#D35400;
+    left:61.5%;
+    top:49%;
+    transform:rotate(80deg);}
+    30%   {width:20px;
+    height:70px;
+    background:#D35400;
+    left:61.5%;
+    top:49%;
+    transform:rotate(80deg);}
+    70% {left:50%;top:61%;box-shadow:2px 2px 2px rgba(0,0,0,0.3);background:#FDE3A7;width:30px;height:30px;border-radius:50%;}
+    100% {left:50%;top:61%;box-shadow:2px 2px 2px rgba(0,0,0,0.3);background:#FDE3A7;width:30px;height:30px;border-radius:50%;}
+}
+
+/* Standard syntax */
+@keyframes bf3Move {
+    0%   {width:20px;
+    height:70px;
+    background:#D35400;
+    left:61.5%;
+    top:49%;
+    transform:rotate(80deg);}
+    30%   {width:20px;
+    height:70px;
+    background:#D35400;
+    left:61.5%;
+    top:49%;
+    transform:rotate(80deg);}
+    70% {left:50%;top:61%;box-shadow:2px 2px 2px rgba(0,0,0,0.3);background:#FDE3A7;width:30px;height:30px;border-radius:50%;}
+    100% {left:50%;top:61%;box-shadow:2px 2px 2px rgba(0,0,0,0.3);background:#FDE3A7;width:30px;height:30px;border-radius:50%;}
+}
+
+//feather1 transition
+@-webkit-keyframes bf1Move {
+    0%   {left:43%;
+    top:35%;width:20px;
+    height:70px;
+    background:#D35400;}
+    30%   {left:43%;
+    top:35%;width:20px;
+    height:70px;
+    background:#D35400;}
+    80% {left:36%;top:41%;background:#DADFE1;width:10px;height:40px;}
+    100% {left:36%;top:41%;background:#DADFE1;width:10px;height:40px;}
+}
+
+/* Standard syntax */
+@keyframes bf1Move {
+    0%   {left:43%;
+    top:35%;width:20px;
+    height:70px;
+    background:#D35400;}
+    30%   {left:43%;
+    top:35%;width:20px;
+    height:70px;
+    background:#D35400;}
+    80% {left:36%;top:41%;background:#DADFE1;width:10px;height:40px;}
+    100% {left:36%;top:41%;background:#DADFE1;width:10px;height:40px;}
+}
+
+//feather2 transition
+@-webkit-keyframes bf2Move {
+    0%   {width:20px;
+    height:70px;
+    background:#D35400;
+    left:54%;
+    top:38%;
+    transform:rotate(28deg);}
+    30%   {width:20px;
+    height:70px;
+    background:#D35400;
+    left:54%;
+    top:38%;
+    transform:rotate(28deg);}
+    80% {left:45%;top:41%;background:#DADFE1;width:10px;height:40px;transform:rotate(0deg)}
+   100% {left:45%;top:41%;background:#DADFE1;width:10px;height:40px;transform:rotate(0deg)}
+}
+
+/* Standard syntax */
+@keyframes bf2Move {
+    0%   {width:20px;
+    height:70px;
+    background:#D35400;
+    left:54%;
+    top:38%;
+    transform:rotate(28deg);}
+    30%   {width:20px;
+    height:70px;
+    background:#D35400;
+    left:54%;
+    top:38%;
+    transform:rotate(28deg);}
+    80% {left:45%;top:41%;background:#DADFE1;width:10px;height:40px;transform:rotate(0deg)}
+    100% {left:45%;top:41%;background:#DADFE1;width:10px;height:40px;transform:rotate(0deg)}
+}
+
+//smallfeather1 transition
+@-webkit-keyframes sf1Move {
+  0%{width:15px;
+  height:50px;
+  background:#FDE3A7;
+  top:38%;
+  left:49%;
+  transform:rotate(11deg);}
+  30%{width:15px;
+  height:50px;
+  background:#FDE3A7;
+  top:38%;
+  left:49%;
+  transform:rotate(11deg);}
+  70%{left:40.5%;top:44%;background:#DADFE1;width:10px;height:20px;transform:rotate(0deg)}
+  100%{left:40.5%;top:44%;background:#DADFE1;width:10px;height:20px;transform:rotate(0deg)}
+}
+
+/* Standard syntax */
+@keyframes sf1Move {
+  0%{width:15px;
+  height:50px;
+  background:#FDE3A7;
+  top:38%;
+  left:49%;
+  transform:rotate(11deg);}
+  30%{width:15px;
+  height:50px;
+  background:#FDE3A7;
+  top:38%;
+  left:49%;
+  transform:rotate(11deg);}
+  70%{left:40.5%;top:44%;background:#DADFE1;width:10px;height:20px;transform:rotate(0deg)}
+  100%{left:40.5%;top:44%;background:#DADFE1;width:10px;height:20px;transform:rotate(0deg)}
+}
+
+//smallfeather2
+@-webkit-keyframes sf2Move {
+  0%{}
+  50%{opacity:0;}
+  100%{opacity:0;}
+}
+
+/* Standard syntax */
+@keyframes sf2Move {
+  0%{}
+  50%{opacity:0;}
+  100%{opacity:0;}
+}
+
+
+//beak transition
+@-webkit-keyframes beakMove {
+  0%{}
+  50%{opacity:0;}
+  100%{opacity:0;}
+}
+
+/* Standard syntax */
+@keyframes beakMove {
+  0%{}
+  50%{opacity:0;}
+  100%{opacity:0;}
+}
+
+
+//beak transition
+@-webkit-keyframes gMove {
+  0%{}
+  50%{opacity:0;}
+  100%{opacity:0;}
+}
+
+/* Standard syntax */
+@keyframes gMove {
+  0%{}
+  50%{opacity:0;}
+  100%{opacity:0;}
+}
+
+.body {
+  width:130px;
+  height:90px;
+  background:#F27935;
   position: absolute;
-  width: 123px;
-  height: 61px;
-  left: 0;
-  bottom: 0;
-  background: white;
+  left:30%;
+  top:50%;
+  border-top-left-radius:100%;
+  border-bottom-left-radius:90%;
+  border-top-right-radius:100%;
+  border-bottom-right-radius:100%;
+  transform:rotate(-10deg);
+  /*border-top-left-radius:40%;
+  border-top-right-radius:80%;
+  border-bottom-left-radius:30%;
+  border-bottom-right-radius:30%;*/
+  -webkit-animation: bodyMove 2s linear 1s 1 normal forwards; /* Chrome, Safari, Opera */
+  animation: bodyMove 2s linear 1s 1 normal forwards; /* Standard syntax */
 }
-#christmas .ground:before {
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  content: " ";
+.head {
+  width:60px;
+  height:60px;
+  border-radius:50%;
   position: absolute;
-  width: 130px;
-  height: 100px;
-  top: 10px;
-  right: -60px;
-  background: white;
+  left:24%;
+  top:40%;
+  background-color:#F27935;
+  -webkit-animation: headMove 2s linear 1s 1 normal forwards; /* Chrome, Safari, Opera */
+  animation: headMove 2s linear 1s 1 normal forwards; /* Standard syntax */
 }
-#christmas .ground:after {
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  content: " ";
+
+.beak {
+width: 0;
+height: 0;
+border-top: 12px solid transparent;
+border-right: 22px solid #F7CA18;
+border-bottom: 12px solid transparent;
+position: absolute;
+top:47%;
+left:19.5%;
+transform:rotate(-22deg);
+-webkit-animation: beakMove 2s linear 1s 1 normal forwards; /* Chrome, Safari, Opera */
+  animation: beakMove 2s linear 1s 1 normal forwards; /* Standard syntax */
+}
+.g {
+  width:10px;
+  height:20px;
   position: absolute;
-  width: 90px;
-  height: 70px;
-  top: 5px;
-  right: -75px;
-  background: white;
+  background:#CF000F;
+  left:24%;
+  top:52%;
+  -webkit-animation: gMove 2s linear 1s 1 normal forwards; /* Chrome, Safari, Opera */
+  animation: gMove 2s linear 1s 1 normal forwards; /* Standard syntax */
 }
-#christmas .tree {
+
+.bf1 {
+  width:20px;
+  height:70px;
+  background:#D35400;
   position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-color: transparent transparent #23915b transparent;
+  left:43%;
+  top:35%;
+   -webkit-animation: bf1Move 2s linear 1s 1 normal forwards; /* Chrome, Safari, Opera */
+  animation: bf1Move 2s linear 1s 1 normal forwards; /* Standard syntax */
 }
-#christmas .tree:before {
-  content: " ";
+.bf2 {
+  width:20px;
+  height:70px;
+  background:#D35400;
   position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-color: transparent transparent #23915b transparent;
+  left:54%;
+  top:38%;
+  transform:rotate(28deg);
+    -webkit-animation: bf2Move 2s linear 1s 1 normal forwards; /* Chrome, Safari, Opera */
+  animation: bf2Move 2s linear 1s 1 normal forwards; /* Standard syntax */
 }
-#christmas .tree:after {
-  content: " ";
+.bf3 {
+  width:20px;
+  height:70px;
+  background:#D35400;
   position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-color: transparent transparent #23915b transparent;
+  left:61.5%;
+  top:49%;
+  transform:rotate(80deg);
+  -webkit-animation: bf3Move 2s linear 1s 1 normal forwards; /* Chrome, Safari, Opera */
+  animation: bf3Move 2s linear 1s 1 normal forwards; /* Standard syntax */
 }
-#christmas .tree.left {
-  left: 75px;
-  bottom: 67px;
-  border-width: 0 18px 24px 18px;
+.sf1{
+width:15px;
+height:50px;
+background:#FDE3A7;
+position: absolute;
+top:38%;
+left:49%;
+transform:rotate(11deg);
+-webkit-animation: sf1Move 2s linear 1s 1 normal forwards; /* Chrome, Safari, Opera */
+  animation: sf1Move 2s linear 1s 1 normal forwards; /* Standard syntax */
 }
-#christmas .tree.left:before {
-  top: 10px;
-  left: -21px;
-  border-width: 0 21px 28px 21px;
+ .sf2{
+width:15px;
+height:50px;
+background:#FDE3A7;
+position: absolute;
+top:45%;
+left:59%;
+transform:rotate(53deg);
+-webkit-animation: sf2Move 2s linear 1s 1 normal forwards; /* Chrome, Safari, Opera */
+  animation: sf2Move 2s linear 1s 1 normal forwards; /* Standard syntax */
 }
-#christmas .tree.left:after {
-  top: 22px;
-  left: -24px;
-  border-width: 0 24px 32px 24px;
-}
-#christmas .tree.left .snow {
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  -moz-box-shadow:    -13px 17px 0 1px white, -16px 19px 0 0 white, -9px 16px 0 0 white, -5px 15px 0 2px white, -9px 13px 0 0 white, 6px 15px 0 2px white, 0 13px 0 1px white, 11px 14px 0 1px white, 13px 17px 0 1px white, 15px 19px 0 0 white;
-  -webkit-box-shadow:     -13px 17px 0 1px white, -16px 19px 0 0 white, -9px 16px 0 0 white, -5px 15px 0 2px white, -9px 13px 0 0 white, 6px 15px 0 2px white, 0 13px 0 1px white, 11px 14px 0 1px white, 13px 17px 0 1px white, 15px 19px 0 0 white;
-  box-shadow:     -13px 17px 0 1px white, -16px 19px 0 0 white, -9px 16px 0 0 white, -5px 15px 0 2px white, -9px 13px 0 0 white, 6px 15px 0 2px white, 0 13px 0 1px white, 11px 14px 0 1px white, 13px 17px 0 1px white, 15px 19px 0 0 white;
+.leg {
+  width:15px;
+  height:30px;
+  background:#F7CA18;
   position: absolute;
-  top: 1px;
-  left: -3px;
-  width: 6px;
-  height: 6px;
-  z-index: 1;
-}
-#christmas .tree.left .snow:after {
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  -moz-box-shadow: -14px 14px 0 0 white, -15px 17px 0 1px white, -18px 19px 0 0 white, -9px 16px 0 0 white, -5px 15px 0 2px white, -9px 13px 0 0 white, 6px 15px 0 2px white, 0 13px 0 1px white, 12px 17px 0 3px white, 16px 17px 0 1px white, 18px 19px 0 0 white, 11px 20px 0 1px white, 16px 20px 0 1px white, 18px 22px 0 1px white, 21px 25px 0 0 white, -2px 27px 0 1px white;
-  -webkit-box-shadow: -14px 14px 0 0 white, -15px 17px 0 1px white, -18px 19px 0 0 white, -9px 16px 0 0 white, -5px 15px 0 2px white, -9px 13px 0 0 white, 6px 15px 0 2px white, 0 13px 0 1px white, 12px 17px 0 3px white, 16px 17px 0 1px white, 18px 19px 0 0 white, 11px 20px 0 1px white, 16px 20px 0 1px white, 18px 22px 0 1px white, 21px 25px 0 0 white, -2px 27px 0 1px white;
-  box-shadow: -14px 14px 0 0 white, -15px 17px 0 1px white, -18px 19px 0 0 white, -9px 16px 0 0 white, -5px 15px 0 2px white, -9px 13px 0 0 white, 6px 15px 0 2px white, 0 13px 0 1px white, 12px 17px 0 3px white, 16px 17px 0 1px white, 18px 19px 0 0 white, 11px 20px 0 1px white, 16px 20px 0 1px white, 18px 22px 0 1px white, 21px 25px 0 0 white, -2px 27px 0 1px white;
-  content: " ";
-  position: absolute;
-  top: 14px;
-  left: 0px;
-  width: 6px;
-  height: 6px;
-  z-index: 1;
-}
-
-
-
-#christmas .star {
-    color: yellow;
-    position: absolute;
-    z-index: 10;
-    left: -7.5px;
-    top: -13px;
-    animation: star-shine 4s infinite ease-in-out;
-}
-
-
-
-
-#christmas .lights {
-    height:1px;
-    width:1px;
-    background: yellow;
-    z-index: 10;
-    position:absolute;
-  }
-  #christmas .light1 {
-    top:7px;
-    left:-1px;
-    animation: twinkletwinkle 1s 1s infinite ease-in-out;
-  }
-  #christmas .light2 {
-    top:9px;
-    left:-2px;
-      background: #FF4640;
-    animation: twinkletwinkle 6s 1s infinite ease-in-out;
-  }
- #christmas .light3 {
-    top:9px;
-    left:-4px;
-     background: #45EFFF;
-    animation: twinkletwinkle 5s 1s infinite ease-in-out;
-  }
- #christmas .light4 {
-    top:8px;
-    left:3px;
-    animation: twinkletwinkle 4s 1s infinite ease-in-out;
-  }
- #christmas .light5 {
-    top:10px;
-    left:-7px;
-     background: #FF4640;
-    animation: twinkletwinkle 3s 1s infinite ease-in-out;
-  }
- #christmas .light6 {
-    top:10px;
-    left:6px;
-     background: #45EFFF;
-    animation: twinkletwinkle 2s 1s infinite ease-in-out;
-  }
-
-  #christmas .light7 {
-    top:26px;
-    left:5px;
-    animation: twinkletwinkle 1s 1s infinite ease-in-out;
-  }
-  #christmas .light8 {
-    top:24px;
-    left:-2px;
-      background: #FF4640;
-    animation: twinkletwinkle 6s 1s infinite ease-in-out;
-  }
- #christmas .light9 {
-    top:24px;
-    left:-4px;
-     background: #45EFFF;
-    animation: twinkletwinkle 5s 1s infinite ease-in-out;
-  }
- #christmas .light10 {
-    top:23px;
-    left:1px;
-    animation: twinkletwinkle 4s 1s infinite ease-in-out;
-  }
- #christmas .light11 {
-    top:25px;
-    left:-9px;
-     background: #FF4640;
-    animation: twinkletwinkle 3s 1s infinite ease-in-out;
-  }
- #christmas .light12 {
-    top:26px;
-    left:9px;
-     background: #45EFFF;
-    animation: twinkletwinkle 2s 1s infinite ease-in-out;
-  }
-
-
-
-
-#christmas .flake {
-  -webkit-animation: snow infinite linear 30s;
-  -moz-animation: snow infinite linear 30s;
-  -ms-animation: snow infinite linear 30s;
-  -o-animation: snow infinite linear 30s;
-  animation: snow infinite linear 30s;
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  background: white;
-}
-#christmas .flake.large {
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  width: 4px;
-  height: 4px;
-}
-#christmas .flake.f-1 {
-  -webkit-animation-duration: 20s;
-  -moz-animation-duration: 20s;
-  -ms-animation-duration: 20s;
-  -o-animation-duration: 20s;
-  animation-duration: 20s;
-  left: 15px;
-  margin-top: 86px;
-}
-#christmas .flake.f-2 {
-  -webkit-animation-duration: 23s;
-  -moz-animation-duration: 23s;
-  -ms-animation-duration: 23s;
-  -o-animation-duration: 23s;
-  animation-duration: 23s;
-  left: 32px;
-  margin-top: 52px;
-}
-#christmas .flake.f-3 {
-  -webkit-animation-duration: 32s;
-  -moz-animation-duration: 32s;
-  -ms-animation-duration: 32s;
-  -o-animation-duration: 32s;
-  animation-duration: 32s;
-  left: 64px;
-  margin-top: 15px;
-}
-#christmas .flake.f-4 {
-  -webkit-animation-duration: 21s;
-  -moz-animation-duration: 21s;
-  -ms-animation-duration: 21s;
-  -o-animation-duration: 21s;
-  animation-duration: 21s;
-  left: 69px;
-  margin-top: 34px;
-}
-#christmas .flake.f-5 {
-  -webkit-animation-duration: 24s;
-  -moz-animation-duration: 24s;
-  -ms-animation-duration: 24s;
-  -o-animation-duration: 24s;
-  animation-duration: 24s;
-  left: 70px;
-  margin-top: 72px;
-}
-#christmas .flake.f-6 {
-  -webkit-animation-duration: 16s;
-  -moz-animation-duration: 16s;
-  -ms-animation-duration: 16s;
-  -o-animation-duration: 16s;
-  animation-duration: 16s;
-  left: 90px;
-  margin-top: 97px;
-}
-#christmas .flake.f-7 {
-  -webkit-animation-duration: 34s;
-  -moz-animation-duration: 34s;
-  -ms-animation-duration: 34s;
-  -o-animation-duration: 34s;
-  animation-duration: 34s;
-  left: 102px;
-  margin-top: 81px;
-}
-#christmas .flake.f-8 {
-  -webkit-animation-duration: 37s;
-  -moz-animation-duration: 37s;
-  -ms-animation-duration: 37s;
-  -o-animation-duration: 37s;
-  animation-duration: 37s;
-  left: 102px;
-  margin-top: 40px;
-}
-#christmas .flake.f-9 {
-  -webkit-animation-duration: 35s;
-  -moz-animation-duration: 35s;
-  -ms-animation-duration: 35s;
-  -o-animation-duration: 35s;
-  animation-duration: 35s;
-  left: 108px;
-  margin-top: 67px;
-}
-#christmas .flake.f-10 {
-  -webkit-animation-duration: 23s;
-  -moz-animation-duration: 23s;
-  -ms-animation-duration: 23s;
-  -o-animation-duration: 23s;
-  animation-duration: 23s;
-  left: 90px;
-  margin-top: 11px;
-}
-#christmas .flake.f-11 {
-  -webkit-animation-duration: 27s;
-  -moz-animation-duration: 27s;
-  -ms-animation-duration: 27s;
-  -o-animation-duration: 27s;
-  animation-duration: 27s;
-  left: 126px;
-  margin-top: 55px;
-}
-#christmas .flake.f-12 {
-  -webkit-animation-duration: 29s;
-  -moz-animation-duration: 29s;
-  -ms-animation-duration: 29s;
-  -o-animation-duration: 29s;
-  animation-duration: 29s;
-  left: 131px;
-  margin-top: 27px;
-}
-#christmas .flake.f-13 {
-  -webkit-animation-duration: 24s;
-  -moz-animation-duration: 24s;
-  -ms-animation-duration: 24s;
-  -o-animation-duration: 24s;
-  animation-duration: 24s;
-  left: 128px;
-  margin-top: 112px;
-}
-#christmas .flake.f-14 {
-  -webkit-animation-duration: 23s;
-  -moz-animation-duration: 23s;
-  -ms-animation-duration: 23s;
-  -o-animation-duration: 23s;
-  animation-duration: 23s;
-  left: 146px;
-  margin-top: 72px;
-}
-#christmas .flake.f-15 {
-  -webkit-animation-duration: 19s;
-  -moz-animation-duration: 19s;
-  -ms-animation-duration: 19s;
-  -o-animation-duration: 19s;
-  animation-duration: 19s;
-  left: 147px;
-  margin-top: 102px;
-}
-#christmas .flake.f-16 {
-  -webkit-animation-duration: 22s;
-  -moz-animation-duration: 22s;
-  -ms-animation-duration: 22s;
-  -o-animation-duration: 22s;
-  animation-duration: 22s;
-  left: 166px;
-  margin-top: 100px;
-}
-#christmas .flake.f-17 {
-  -webkit-animation-duration: 18s;
-  -moz-animation-duration: 18s;
-  -ms-animation-duration: 18s;
-  -o-animation-duration: 18s;
-  animation-duration: 18s;
-  left: 177px;
-  margin-top: 73px;
-}
-#christmas .flake.f-18 {
-  -webkit-animation-duration: 26s;
-  -moz-animation-duration: 26s;
-  -ms-animation-duration: 26s;
-  -o-animation-duration: 26s;
-  animation-duration: 26s;
-  left: 22px;
-  margin-top: 79px;
-}
-#christmas .flake.f-19 {
-  -webkit-animation-duration: 20s;
-  -moz-animation-duration: 20s;
-  -ms-animation-duration: 20s;
-  -o-animation-duration: 20s;
-  animation-duration: 20s;
-  left: 31px;
-  margin-top: 41px;
-}
-#christmas .flake.f-20 {
-  -webkit-animation-duration: 19s;
-  -moz-animation-duration: 19s;
-  -ms-animation-duration: 19s;
-  -o-animation-duration: 19s;
-  animation-duration: 19s;
-  left: 38px;
-  margin-top: 56px;
-}
-#christmas .flake.f-21 {
-  -webkit-animation-duration: 31s;
-  -moz-animation-duration: 31s;
-  -ms-animation-duration: 31s;
-  -o-animation-duration: 31s;
-  animation-duration: 31s;
-  left: 56px;
-  margin-top: 43px;
-}
-#christmas .flake.f-22 {
-  -webkit-animation-duration: 20s;
-  -moz-animation-duration: 20s;
-  -ms-animation-duration: 20s;
-  -o-animation-duration: 20s;
-  animation-duration: 20s;
-  left: 89px;
-  margin-top: 57px;
-}
-#christmas .flake.f-23 {
-  -webkit-animation-duration: 18s;
-  -moz-animation-duration: 18s;
-  -ms-animation-duration: 18s;
-  -o-animation-duration: 18s;
-  animation-duration: 18s;
-  left: 90px;
-  margin-top: 30px;
-}
-#christmas .flake.f-24 {
-  -webkit-animation-duration: 28s;
-  -moz-animation-duration: 28s;
-  -ms-animation-duration: 28s;
-  -o-animation-duration: 28s;
-  animation-duration: 28s;
-  left: 100px;
-  margin-top: 119px;
-}
-#christmas .flake.f-25 {
-  -webkit-animation-duration: 29s;
-  -moz-animation-duration: 29s;
-  -ms-animation-duration: 29s;
-  -o-animation-duration: 29s;
-  animation-duration: 29s;
-  left: 114px;
-  margin-top: 14px;
-}
-#christmas .flake.f-26 {
-  -webkit-animation-duration: 25s;
-  -moz-animation-duration: 25s;
-  -ms-animation-duration: 25s;
-  -o-animation-duration: 25s;
-  animation-duration: 25s;
-  left: 127px;
-  margin-top: 84px;
-}
-#christmas .flake.f-27 {
-  -webkit-animation-duration: 26s;
-  -moz-animation-duration: 26s;
-  -ms-animation-duration: 26s;
-  -o-animation-duration: 26s;
-  animation-duration: 26s;
-  left: 134px;
-  margin-top: 114px;
-}
-#christmas .flake.f-28 {
-  -webkit-animation-duration: 34s;
-  -moz-animation-duration: 34s;
-  -ms-animation-duration: 34s;
-  -o-animation-duration: 34s;
-  animation-duration: 34s;
-  left: 145px;
-  margin-top: 49px;
-}
-#christmas .flake.f-29 {
-  -webkit-animation-duration: 29s;
-  -moz-animation-duration: 29s;
-  -ms-animation-duration: 29s;
-  -o-animation-duration: 29s;
-  animation-duration: 29s;
-  left: 148px;
-  margin-top: 42px;
-}
-#christmas .flake.f-30 {
-  -webkit-animation-duration: 23s;
-  -moz-animation-duration: 23s;
-  -ms-animation-duration: 23s;
-  -o-animation-duration: 23s;
-  animation-duration: 23s;
-  left: 157px;
-  margin-top: 70px;
-}
-#christmas .flake.f-31 {
-  -webkit-animation-duration: 18s;
-  -moz-animation-duration: 18s;
-  -ms-animation-duration: 18s;
-  -o-animation-duration: 18s;
-  animation-duration: 18s;
-  left: 165px;
-  margin-top: 78px;
-}
-
-@-webkit-keyframes snow {
-  0% {
-    -moz-transform: translateY(-110px);
-    -ms-transform: translateY(-110px);
-    -webkit-transform: translateY(-110px);
-    transform: translateY(-110px);
-  }
-  100% {
-    -moz-transform: translateY(160px);
-    -ms-transform: translateY(160px);
-    -webkit-transform: translateY(160px);
-    transform: translateY(160px);
-  }
-}
-@-moz-keyframes snow {
-  0% {
-    -moz-transform: translateY(-110px);
-    -ms-transform: translateY(-110px);
-    -webkit-transform: translateY(-110px);
-    transform: translateY(-110px);
-  }
-  100% {
-    -moz-transform: translateY(160px);
-    -ms-transform: translateY(160px);
-    -webkit-transform: translateY(160px);
-    transform: translateY(160px);
-  }
-}
-@-ms-keyframes snow {
-  0% {
-    -moz-transform: translateY(-110px);
-    -ms-transform: translateY(-110px);
-    -webkit-transform: translateY(-110px);
-    transform: translateY(-110px);
-  }
-  100% {
-    -moz-transform: translateY(160px);
-    -ms-transform: translateY(160px);
-    -webkit-transform: translateY(160px);
-    transform: translateY(160px);
-  }
-}
-@keyframes snow {
-  0% {
-    -moz-transform: translateY(-110px);
-    -ms-transform: translateY(-110px);
-    -webkit-transform: translateY(-110px);
-    transform: translateY(-110px);
-  }
-  100% {
-    -moz-transform: translateY(160px);
-    -ms-transform: translateY(160px);
-    -webkit-transform: translateY(160px);
-    transform: translateY(160px);
-  }
-}
-
-@keyframes star-shine {
-  0% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.6;
-  }
-}
-@keyframes twinkletwinkle {
-  0% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.5;
-  }
+  top:70%;
+  left:40%;
+  -webkit-animation: legMove 2s linear 1s 1 normal forwards; /* Chrome, Safari, Opera */
+  animation: legMove 2s linear 1s 1 normal forwards; /* Standard syntax */
 }
